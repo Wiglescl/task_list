@@ -21,8 +21,8 @@ function createTaskIten(taskArr) {
                 <div class="task__item-text-container"><p class="${element.complited ? 'text-completed-style' : ''}" id="task__item-text">${element.title}</p><p class="${element.description ? 'description__li' : ''}">${element.description || ''}</p></div>
                     <div class="task__item-btn-container">
                         <button class="task__item-btn fertig">Выполнено</button>
-                        <button class="task__item-btn task__item-cencel">Отменить</button>
                         <button class="task__item-btn description">Настроить описание</button>
+                        <button class="task__item-btn task__item-cencel">X</button>
                     </div>
                 </li>
             `)

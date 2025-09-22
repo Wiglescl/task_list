@@ -117,7 +117,7 @@ html {
 .task__item-text {
     overflow-wrap: break-word;
     white-space: normal;
-    color: red;
+    color: rgb(145, 91, 91);
 }
 
 .task__manage {
@@ -133,7 +133,7 @@ html {
     margin-bottom: 5px;
     width: 80vw;
     box-shadow: 12px 0px 47px 3px rgba(34, 60, 80, 0.12);
-    border: 2px solid rgb(177, 177, 177);
+    border: 2px solid rgb(240, 240, 240);
 }
 
 
@@ -142,12 +142,15 @@ html {
     height: 50px;
     border-radius: 10px;
     padding: 10px;
+    border: 1px solid rgb(238, 238, 238);
 }
 
 
 
 .task__item-cencel {
-    background-color: rgb(255, 235, 235);
+    background-color: rgb(255, 93, 93);
+    color: white;
+    padding: 0 20px 0 20px;
 }
 
 .text-completed-style {
@@ -164,7 +167,10 @@ html {
     margin-bottom: 5px;
 }
 
-
+.description {
+    width: 70px;
+    font-size: 10px;
+}
 
 .description__li {
     margin-top: 10px;
