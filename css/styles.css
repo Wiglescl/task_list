@@ -1,0 +1,169 @@
+* {
+    font-family: sans-serif;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1260px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.test__section {
+    background-color: rgb(212, 212, 212);
+}
+
+.slider-container {
+    overflow: hidden;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.test__section-inner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.summm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+}
+
+.antwort_block {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#antwort {
+    width: 100%;
+    
+}
+
+#antwort-btn {
+    width: 20%;
+    font-size: 13px;
+}
+
+.inpClass {
+    padding: 10px;
+    font-size: 20px;
+    color: #575757;
+    
+}
+
+.window_summ {
+    border-radius: 10px;
+    background-color: white;
+    
+}
+
+.task__item-text-container {
+    max-width: 72%;
+}
+
+.task__item-btn-container {
+    display: flex;
+    gap: 5px;
+}
+
+.task__item-text {
+    overflow-wrap: break-word;
+    white-space: normal;
+    
+}
+
+.task__manage {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.task__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 80vw;
+}
+
+
+
+.task__item-btn {
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+.task__item-cencel {
+    background-color: rgb(255, 235, 235);
+}
+
+.text-completed-style {
+    text-decoration: line-through;
+    color: rgb(204, 204, 204);
+}
+
+.rr {
+    transition: 2s;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+
+.description__li {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#input__description {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 500px;
+    margin-top: 120px;
+    margin-bottom: -250px;
+    display: none;
+}
+
+
+
+@media (max-width: 547px) {
+
+    .task__item {
+        width: 100%;
+    }
+}
+
+
+
+@media (min-width: 1300px) {
+
+    .task__item {
+        width: 60vw;
+    }
+}
