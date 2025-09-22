@@ -1,3 +1,7 @@
+html {
+    background-color: rgb(212, 212, 212);
+}
+
 * {
     font-family: sans-serif;
 }
@@ -6,7 +10,6 @@
 .wrapper {
     min-height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 .container {
@@ -146,8 +149,8 @@
     border-radius: 10px;
     width: 500px;
     margin-top: 120px;
-    margin-bottom: -250px;
     display: none;
+    margin-bottom: 10px;
 }
 
 
