@@ -96,13 +96,21 @@ function addEvents() {
 function descriptionVisible() {
     const descriptionBtnArray = Array.from(descriptionBtn)
     descriptionBtnArray.forEach(btn => {
+        let descriptionInputActive = false
         btn.addEventListener('click', () => {
             console.log(btn)
-            descriptionInput.style.display = 'block'
-            btn.addEventListener('click', () => {
+            descriptionInputActive = !descriptionInputActive
+            if(descriptionInputActive) {
+                descriptionInput.style.display = 'block'
+            } else if (!descriptionInputActive) {
                 descriptionInput.style.display = 'none'
-            })
+            }
         })
+        // btn.addEventListener('click', () => {
+        //     console.log(btn)
+        //     descriptionInput.style.display = 'block'
+        //     a = false
+        // })
     })
 }
 render()
