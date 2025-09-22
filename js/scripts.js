@@ -3,7 +3,6 @@ const inputElement = document.getElementById('antwort')
 const createbtn = document.getElementById('antwort-btn')
 const cencelBtn = document.getElementsByClassName('task__item-cencel')
 const fertigbtn = document.getElementsByClassName('fertig')
-const descriptionBtn = document.getElementsByClassName('description')
 const descriptionInput = document.getElementById('input__description')
 
 const taskArray = [{ title: 'Купить рыбу', complited: false, description: 'Чот мне кажется брать не нужно' },
@@ -92,18 +91,22 @@ function addEvents() {
     })
 }
 
+let currentTaskIndex = null
 
 function descriptionVisible() {
-    const descriptionBtnArray = Array.from(descriptionBtn)
-    descriptionBtnArray.forEach(btn => {
-        let descriptionInputActive = false
+    const descriptionBtnArray = document.querySelectorAll('.description')
+    descriptionBtnArray.forEach((btn, index) => {
         btn.addEventListener('click', () => {
             console.log(btn)
-            descriptionInputActive = !descriptionInputActive
-            if(descriptionInputActive) {
-                descriptionInput.style.display = 'block'
-            } else if (!descriptionInputActive) {
+            if (currentTaskIndex === index) {
                 descriptionInput.style.display = 'none'
+                taskArray[index].description = descriptionInput.value
+                currentTaskIndex = null
+                render()
+            } else {
+                descriptionInput.style.display = 'block'
+                descriptionInput.value = taskArray[index].description || ''
+                currentTaskIndex = index
             }
         })
     })
