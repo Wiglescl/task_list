@@ -5,10 +5,7 @@ const cencelBtn = document.getElementsByClassName('task__item-cencel')
 const fertigbtn = document.getElementsByClassName('fertig')
 const descriptionInput = document.getElementById('input__description')
 
-const taskArray = JSON.parse(localStorage.getItem("taskArray")) || [{ title: 'Купить рыбу', complited: false, description: 'Чот мне кажется брать не нужно' },
-{ title: 'Купить пиво', complited: true, description: 'нормальную такую темку пойти взять' },
-{ title: 'Пойти в качалку', complited: false, description: '' }
-];
+const taskArray = JSON.parse(localStorage.getItem("taskArray"))
 
 
 function createTaskIten(taskArr) {
