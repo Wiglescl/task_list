@@ -5,12 +5,10 @@ const cencelBtn = document.getElementsByClassName('task__item-cencel')
 const fertigbtn = document.getElementsByClassName('fertig')
 const descriptionInput = document.getElementById('input__description')
 
-const taskArray = [{ title: 'Купить рыбу', complited: false, description: 'Чот мне кажется брать не нужно' },
+const taskArray = JSON.parse(localStorage.getItem("taskArray")) || [{ title: 'Купить рыбу', complited: false, description: 'Чот мне кажется брать не нужно' },
 { title: 'Купить пиво', complited: true, description: 'нормальную такую темку пойти взять' },
 { title: 'Пойти в качалку', complited: false, description: '' }
 ];
-
-
 
 
 function createTaskIten(taskArr) {
@@ -29,34 +27,16 @@ function createTaskIten(taskArr) {
     })
 }
 
-// function forbtnElement() {
-
-//     newArrayBtn.forEach((btn, index) => {
-//         btn.addEventListener('click', () => {
-//             taskArray[index].complited = true
-//             console.log(taskArray)
-//         })
-//     })
-
-// }
-
-
-// for(let btn of newArrayBtn) {
-//     btn.addEventListener('click', () => {
-//         for(let i = 0; i < taskArray.length; i++) {
-//             taskArray[i] = true
-//             console.log(i)
-//         }
-//         console.log(taskArray)
-//     })
-// }
-
+function saveTasks() {
+    localStorage.setItem("taskArray", JSON.stringify(taskArray));
+}
 
 function render() {
     taskList.innerHTML = ''
     createTaskIten(taskArray)
     addEvents()
     descriptionVisible()
+    saveTasks()
 }
 
 function sleep(ms) {
@@ -123,14 +103,12 @@ createbtn.addEventListener('click', () => {
         taskArray.unshift(newNote)
         render()
         console.log(taskList)
-
     }
     console.log(taskArray)
     inputElement.value = ''
-
 })
 
-
+localStorage.setItem("taskArray", JSON.stringify(taskArray))
 
 
 
