@@ -46,10 +46,8 @@ function addEvents() {
         btn.addEventListener('click', () => {
             if (taskArray[index].complited == true) {
                 taskArray[index].complited = false
-                console.log(taskArray[index])
             } else if (taskArray[index].complited == false) {
                 taskArray[index].complited = true
-                console.log(taskArray[index])
             } else {
                 console.log('gg')
             }
@@ -74,7 +72,6 @@ function descriptionVisible() {
     const descriptionBtnArray = document.querySelectorAll('.description')
     descriptionBtnArray.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            console.log(btn)
             if (currentTaskIndex === index) {
                 descriptionInput.style.display = 'none'
                 taskArray[index].description = descriptionInput.value
@@ -99,9 +96,7 @@ createbtn.addEventListener('click', () => {
         }
         taskArray.unshift(newNote)
         render()
-        console.log(taskList)
     }
-    console.log(taskArray)
     inputElement.value = ''
 })
 
